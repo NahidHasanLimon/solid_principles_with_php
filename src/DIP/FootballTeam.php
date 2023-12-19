@@ -1,12 +1,8 @@
 <?php
 
 namespace DIP;
-class FootballTeam
+class FootballTeam implements ITeamBuild
 {
-    public function __construct()
-    {
-        echo "Hello from FootballTeam constructor";
-    }
 
     public function build()
     {

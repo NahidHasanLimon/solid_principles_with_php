@@ -1,19 +1,18 @@
 <?php
 
 namespace DIP;
-class TeamBuild
+class TeamBuild implements  ITeamBuild
 {
-    private $team;
-    public function __construct(CricketTeam $team)
+    private  $team;
+//    private   $ITeamBuild;
+    public function __construct(ITeamBuild $team)
     {
-        $this->$team = $team;
         echo "Hello from team build constructor";
+        $this->team = $team;
     }
     public function build()
     {
-        $this->team->buld();
-        return "from build team class";
-
+        return $this->team->build();
     }
 
 }
